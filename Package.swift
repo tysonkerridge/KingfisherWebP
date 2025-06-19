@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "KingfisherWebP", targets: ["KingfisherWebP"])
     ],
     dependencies: [
-        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "8.0.0"),
+        .package(url: "https://github.com/tysonkerridge/Kingfisher.git", revision: "466a4a43555e9bc6dc2f4a9fac65b1052ff1b93a"),
         .package(url: "https://github.com/SDWebImage/libwebp-Xcode.git", from: "1.1.0")
     ],
     targets: [
@@ -22,7 +22,9 @@ let package = Package(
         ),
         .target(
             name: "KingfisherWebP-ObjC",
-            dependencies: ["libwebp"]
+            dependencies: [
+                .product(name: "libwebp", package: "libwebp-Xcode"),
+            ]
         )
     ]
 )
