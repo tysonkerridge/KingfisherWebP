@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "KingfisherWebP", targets: ["KingfisherWebP"])
     ],
     dependencies: [
-        .package(url: "https://github.com/tysonkerridge/Kingfisher.git", revision: "466a4a43555e9bc6dc2f4a9fac65b1052ff1b93a"),
+        .package(url: "https://github.com/tysonkerridge/Kingfisher.git", revision: "75762c2f1a235eab0544c3507b16de516e83a25b"),
         .package(url: "https://github.com/SDWebImage/libwebp-Xcode.git", from: "1.1.0")
     ],
     targets: [
